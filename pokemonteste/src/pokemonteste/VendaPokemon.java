@@ -17,6 +17,9 @@ import java.util.Scanner;
  */
 public class VendaPokemon {
     
+        // como o tempo não deu pra instanciar pokemons de brinquedo pra fazer as vendas coloquei aqui com os pokemons reais mas basta mudar o tipo de ArrayList e de instancia pra
+        // pokemons de brinquedo
+    
          ArrayList<Pokemon> pokemonsvenda = new ArrayList();   // pokemons disponiveis pra compra
          ArrayList<Pokemon> pokemonscomprados = new ArrayList(); // "carrinho de compras" do cliente, ia ser armazenado aqui 
          float precototal; // valor total da compra do cliente
@@ -51,13 +54,13 @@ public class VendaPokemon {
                         int escolha = teclado.nextInt();          // le qual pokemon o usuario quer comprar
                         if(escolha<0)
                         {
-                            throw new ValorInvalido();
+                              throw new ValorInvalido("Apenas numeros positivos, valores negativo não permitidos!");
                         }
                         System.out.println("Digite a quantidade de pokemons que você deseja comprar:");
                         qtd = teclado.nextInt();  // a quantidade que ele deseja comprar
                         if(qtd<0)
                         {
-                            throw new ValorInvalido();
+                            throw new ValorInvalido("Apenas numeros positivos, valores negativo não permitidos!");
                         }
                         for(j=0;j<qtd;j++)
                         {    
@@ -68,10 +71,10 @@ public class VendaPokemon {
                         controle = teclado.nextInt();
                         if(controle<0)
                         {
-                            throw new ValorInvalido();
+                            throw new ValorInvalido("Apenas numeros positivos, valores negativo não permitidos!");
                         }
                 }catch(ValorInvalido e){
-                     e.showmessage();
+                     System.out.println(e.getMessage());
                 }
              }while(controle!=0);  
              if(controle==1)

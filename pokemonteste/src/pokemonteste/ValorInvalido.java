@@ -9,14 +9,8 @@ package pokemonteste;
  *
  * @author 1513 X-MXTI
  */
-public class ValorInvalido extends RuntimeException {
-    
-        public ValorInvalido()
-        {
-        super("Apenas numeros positivos!");
-        }
-
-    void showmessage() {
-        System.out.println("Apenas numeros positivos!");
+public class ValorInvalido extends Exception {
+    public ValorInvalido(String message){
+        super(message);
     }
 }
