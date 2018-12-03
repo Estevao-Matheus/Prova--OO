@@ -110,8 +110,9 @@ public class Menu {
         float preco = (float) 19.50;
         for(j=0;j<10;j++)
         {
-            Pokemon Magmar1 = new Magmar ("Magmar",preco,"mag");
-            loja.adicioaloja(Magmar1);
+            Pokemon Magmar1 = new Magmar ("Magmar",preco,"mag"); // Aqui foram instanciados pokemons reais, mas no caso de pokemons de brinquedo
+            loja.adicioaloja(Magmar1);                           // bestava criar pokmons extendo da nova classe PokemonBrinquedo e instanciar eles
+                                                                 // adicionando-os a loja
         }
         loja.comprapokemon(coach);
         
