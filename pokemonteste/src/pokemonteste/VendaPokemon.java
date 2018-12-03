@@ -45,7 +45,7 @@ public class VendaPokemon {
                         System.out.println("Pokemons a venda:");
                         for(i=0;i<pokemonsvenda.size();i++)     // imprime pokemosn disponíveis pra venda
                         {
-                            System.out.println(i+""+pokemonsvenda.get(i).nome+""+pokemonsvenda.get(i).preço);
+                            System.out.println(i+" Nome: "+pokemonsvenda.get(i).nome+" Preço "+pokemonsvenda.get(i).preço);
                         }
                         System.out.println("Digite o numero do pokemon que você deseja comprar:");           
                         int escolha = teclado.nextInt();          // le qual pokemon o usuario quer comprar
@@ -91,15 +91,15 @@ public class VendaPokemon {
              }
             
             try {
-                FileWriter treinador = new FileWriter("CompraJogador.txt");
-                PrintWriter pw = new PrintWriter(treinador);
+                FileWriter fw = new FileWriter("CompraJogador.txt");
+                PrintWriter pw = new PrintWriter(fw);
                 for(i=0;i<pokemonscomprados.size();i++)
                 {
-                    pw.print(pokemonscomprados.get(i).nome);
-                    pw.print(pokemonscomprados.get(i).preço);
+                    pw.print("Nome:"+pokemonscomprados.get(i).nome);
+                    pw.print("Preço:"+pokemonscomprados.get(i).preço);
                     pw.println();
                 }
-                pw.println(precototal);
+                pw.println("Preço total da compra"+precototal);
                 pw.close();
             } catch (IOException ex) {
                 System.out.println("ERRO!!");

@@ -21,7 +21,7 @@ public class Magmar extends Pokemon implements Fogo {
         this.preço = preco;
         this.Som = som;
     }
-
+    
     
     
     //@return Retorna o nome

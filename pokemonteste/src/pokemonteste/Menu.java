@@ -113,7 +113,7 @@ public class Menu {
             Pokemon Magmar1 = new Magmar ("Magmar",preco,"mag");
             loja.adicioaloja(Magmar1);
         }
-        
+        loja.comprapokemon(coach);
         
         
         
